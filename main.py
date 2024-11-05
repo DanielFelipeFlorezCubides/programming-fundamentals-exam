@@ -1,19 +1,14 @@
-# Desarrolle el código fuente de un programa que permita ingresar cinco voltajes, 
-# obtener su promedio y visualizar "ALTO VOLTAJE", si su promedio es mayor a 220, 
-# caso contrario sea menor mostrar "VOLTAJE CORRECTO".
+# Desarrolle el código fuente de un programa que permita calcular el área de un triángulo equilátero, 
+# adicional visualizar "DATOS NO VÁLIDOS", si el área es mayor a 1000.
+# Explicación:
+# Un triángulo equilátero tiene todos sus lados iguales, y sus ángulos interiores son todos de 60 grados.
+# Esta fórmula se deriva usando trigonometría y geometría básica aplicadas a un triángulo equilátero.
+import math
+lado = float(input('Dame la longitud de un lado del triangulo: '))
 
-voltajeSuma = 0
-voltajes = 0
+area = (((math.sqrt(3))/4)* math.pow(lado, 2))
 
-for i in range(5):
-    voltajes = float(input(f'Por favor ingrese el voltaje numero {i+1}: '))
-    voltajeSuma = voltajes + voltajeSuma
-    
-
-promedio = voltajeSuma / 5
-print(f'Suma de voltajes {voltajeSuma}')
-
-if promedio > 220:
-    print('ALTO VOLTAJE')
+if area > 1000:
+    print('DATOS NO VÁLIDOS')
 else:
-    print('VOLTAJE CORRECTO')
+    print(f'El area del triangulo es: {area}')
