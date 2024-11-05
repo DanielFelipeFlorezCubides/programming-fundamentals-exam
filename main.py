@@ -1,21 +1,8 @@
-# Desarrolle un programa que solicite ingrese tres voltajes distintos e 
-# indique si el promedio de los voltajes ingresados es menor a 115 visualice "VOLTAJE CORRECTO", 
-# caso contrario sea mayor a 115 y menor a 220 visualice "ALTO VOLTAJE", y si es mayor a 220 visualice "PELIGRO".
+# Desarrolle el código fuente de un programa que permita ingresar y leer el valor 
+# correspondiente a una distancia en metros y la visualice expresadas en km.
+# Para convertir metros a kilómetros, puedes usar la siguiente fórmula: Kilometros = metros / 1000
 
-voltajeSuma = 0
-voltajes = 0
+metros = float(input('Por favor ingrese la distancia en metros para convertirla a kilometros: '))
+kilometros = metros / 1000
 
-for i in range(3):
-    voltajes = float(input(f'Por favor ingrese el voltaje numero {i+1}: '))
-    voltajeSuma = voltajes + voltajeSuma
-    
-
-promedio = voltajeSuma / 3
-print(f'Suma de voltajes {voltajeSuma}')
-
-if promedio < 115:
-    print('VOLTAJE CORRECTO')
-elif promedio >= 115 and promedio < 220:
-    print('ALTO VOLTAJE')
-else:
-    print("PELIGRO")
+print(f'La distancia {metros} m convertida a kilometros es: {kilometros} km')
